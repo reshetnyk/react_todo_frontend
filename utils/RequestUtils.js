@@ -1,7 +1,8 @@
 import fetch from 'isomorphic-unfetch'
 
 export const makeRequest = (params) => {
-  const url = params.url
+  const baseUrl = 'https://dashboard.heroku.com/apps/reshetnyk-react-to-do-backend'
+  const url = baseUrl + params.url
   const requestParams = {
     method: params.method || 'get',
     headers: {

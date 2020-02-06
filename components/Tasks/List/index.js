@@ -67,7 +67,7 @@ const List = ({ tasks, setTasks, setBulkToggle }) => {
     })
 
     makeRequest({
-      url: 'http://localhost:3000/api/task_bulk_removes',
+      url: '/api/task_bulk_removes',
       method: 'delete',
       data: { tasks: deletedTasksIds }
     }).then(
@@ -106,7 +106,7 @@ const List = ({ tasks, setTasks, setBulkToggle }) => {
 
     setTasks(reorderTasks(result.source.index, result.destination.index))
     makeRequest({
-      url: 'http://localhost:3000/api/task_update_positions',
+      url: '/api/task_update_positions',
       method: 'put',
       data: { id: result.draggableId, position: result.destination.index + 1 }
     }, setAuthenticated)

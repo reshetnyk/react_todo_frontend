@@ -15,7 +15,7 @@ const Form = ({ tasks, setTasks, bulkToggle, setBulkToggle }) => {
     if (taskTitle.length > 0) {
       setInputValue('')
       makeRequest({
-        url: 'http://localhost:3000/api/tasks',
+        url: '/api/tasks',
         method: 'post',
         data: { title: taskTitle }
       }).then(

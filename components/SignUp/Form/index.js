@@ -12,7 +12,7 @@ const Form = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault()
     makeRequest({
-      url: 'http://localhost:3000/api/users',
+      url: '/api/users',
       method: 'post',
       data: {
         email: emailInput,

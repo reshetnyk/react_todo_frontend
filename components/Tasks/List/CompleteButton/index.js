@@ -24,7 +24,7 @@ const CompleteButton = ({ tasks, setTasks, newStatus, setBulkToggle, text, class
     setBulkToggle(false)
 
     makeRequest({
-      url: 'http://localhost:3000/api/task_update_completes',
+      url: '/api/task_update_completes',
       method: 'put',
       data: { ids, status: newStatus }
     }).then(

@@ -10,7 +10,7 @@ const RemoveLink = ({ task, deleteListItem }) => {
   const linkOnClick = (e) => {
     e.stopPropagation()
     makeRequest({
-      url: 'http://localhost:3000/api/tasks/' + task.id,
+      url: '/api/tasks/' + task.id,
       method: 'delete',
       data: null
     }).then(

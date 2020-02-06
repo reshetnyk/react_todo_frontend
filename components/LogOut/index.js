@@ -8,7 +8,7 @@ const LogOut = () => {
 
   useEffect(() => {
     makeRequest({
-      url: 'http://localhost:3000/api/sessions',
+      url: '/api/sessions',
       method: 'delete'
     }).then(
       () => {

@@ -36,7 +36,7 @@ const TitleField = ({ task, setTasks }) => {
   const applyChanges = () => {
     updateTask({ ...task, title: inputValue, editing: false })
     makeRequest({
-      url: 'http://localhost:3000/api/tasks/' + task.id,
+      url: '/api/tasks/' + task.id,
       method: 'put',
       data: { title: inputValue }
     }).then(

@@ -11,7 +11,7 @@ const Tasks = () => {
   const { setAuthenticated } = useContext(UserContext)
 
   const loadTasks = () => {
-    makeRequest({ url: 'http://localhost:3000/api/tasks' })
+    makeRequest({ url: '/api/tasks' })
       .then(
         data => {
           const newTasks = data.tasks.map(task => {

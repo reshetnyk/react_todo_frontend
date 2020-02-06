@@ -13,7 +13,7 @@ const Form = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault()
     makeRequest({
-      url: 'http://localhost:3000/api/sessions',
+      url: '/api/sessions',
       method: 'post',
       data: {
         email: emailInput,
